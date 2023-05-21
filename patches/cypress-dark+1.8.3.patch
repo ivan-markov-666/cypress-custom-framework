@@ -1,0 +1,14 @@
+diff --git a/node_modules/cypress-dark/src/dark.css b/node_modules/cypress-dark/src/dark.css
+index 10c86b0..13a26c1 100644
+--- a/node_modules/cypress-dark/src/dark.css
++++ b/node_modules/cypress-dark/src/dark.css
+@@ -196,3 +196,8 @@
+   .collapsible-more {
+   margin-left: 5px;
+ }
++
++li[class~="command-name-log"] div.command-wrapper-text > span > span > span {
++  color: red!important;
++  font-weight: 900!important;
++}
+\ No newline at end of file

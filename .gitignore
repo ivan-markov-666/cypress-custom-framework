@@ -1,0 +1,7 @@
+# Dependency directory
+node_modules
+
+# Local Report
+cypress/videos/*
+cypress/screenshots/*
+cypress/report/mochawesome-report/*

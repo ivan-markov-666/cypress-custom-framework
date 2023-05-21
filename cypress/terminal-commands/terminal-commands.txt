@@ -1,0 +1,19 @@
+--------------------------------------
+
+Description:
+This file contains all useful for us commands. The commands can be copied and pasted inside the terminal. Please make sure that you ware not copied the ">" symbol!
+
+--------------------------------------
+
+Write your custom commands from here:
+
+To execute few tests using the command line on specific browser with creating a local report:
+> npx cypress run --spec "cypress\integration\3-TSSamples\mochaExample.spec.ts, cypress\integration\3-TSSamples\sampleTs.spec.ts" --browser chrome --reporter mochawesome
+
+To start the Cypress test runner (make sure that you execute the command inside the root folder of the framework):
+> npm run cypress:open
+
+To execute all test and getting the local report:
+> npx cypress run
+
+--------------------------------------

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node",
+      "cypress-file-upload",
+      "cy-verify-downloads"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
+  ]
+}

@@ -1,0 +1,32 @@
+In this file we will describe all needed to-do actions, that we need to solve at future.
+
+1.  We need to find a way to create a method to get attribute value and assign it to the variable. We have a model to get the attribute value, but we can't return the result to the test class.
+    Here is the code that gets the attribute value:
+            cy.xpath('//*[@id="simpleLink"]').then(function (element) {
+            // 'prop()' method is used to get the attribute value.
+            const url = element.prop('href')
+            cy.visit(url)
+        })
+2.  We need to find a way to combine element and elementNoFocus commands. It seems that the "have.focused" assertion is breaking the try-catch statement if the assertion fails. Possible solution will be created with jest for cypress. There is different assertion similar to this. 
+3.  We need to find a way to make a check if the user inputs incorrect value for drop-down list, when user is using dropDownMultiselect custom method.
+4.  We need to find a way to cover automation for new window message.
+5.  Need to crete a configuration to run the test scripts on different environments. Article example: https://ahmed-alsaab.medium.com/configuring-cypress-to-run-on-different-environments-7ae323bb3c86 .
+6.  Add this like a custom command:
+    If you really really need conditional testing, it can be done, but it's usually an anti-pattern:
+
+        cy
+        .get('body')
+        .then($body => {
+            if ($body.find('.nextjs-portal').length) {
+            // now you know the element was found in the DOM
+            } else {
+            // your element was not found in the DOM
+            }
+        });
+        
+    source: https://stackoverflow.com/questions/67740411/how-to-check-if-an-element-exists-within-the-body-with-cypress
+
+7. Add this like a custom command:
+    Existence: Validating whether the element exists in the DOM. E.g.:
+        cy.get('#loader').should('not.exist')
+8. Review and implement Cypress Real Events : https://github.com/dmtrKovalenko/cypress-real-events
