@@ -19,7 +19,7 @@ Please follow the steps to set up the project:
 > npm install
 6. To start the Cypress test runner, execute the following command in the root folder of the project:
 > npm run cypress:open
-7. If there is a new version of Cypress, you can see a message for it. You can update Cypress by normal behaviour.
+7. If there is a new version of Cypress, you can see a message for it. You can update Cypress by normal behavior.
 8. Read the readme.md file to understand how to use the framework.
 9. Enjoy and automate with pleasure!
 
@@ -32,9 +32,9 @@ Official documentation: https://fakerjsdocs.netlify.app/
 # Build and Test
 To develop new tests:  
 1. Make sure that you read Cypress documentation carefully. It would help if you knew how to create tests with Cypress.
-2. In this frame, we are using a POM design pattern. You must create a PO class in the "cypress/e2e/pom/" folder. For more details, you can see comments inside "cypress/e2e/pom/0.0.Examples/3.RealExample/FillTheForm_po.ts" class. It would be best to create the PO classes like the example one.  
+2. In this frame, we are using a POM design pattern. You must create a PO class in the "cypress/e2e/pom/" folder. For more details, you can see comments inside the "cypress/e2e/pom/0.0.Examples/3.RealExample/FillTheForm_po.ts" class. It would be best to create the PO classes like the example one.  
   - The frame supports multi-client (multi-tenants). For more details, you can review the class "cypress/e2e/pom/0.0.Examples/4.MultiTenantSiteExample/MultiTenantStructure_po.ts".
-3. Create a spec class in the "cypress/e2e/" folder. For more details, you can see comments inside "cypress/e2e/0.0.Examples/3.RealExample/FillTheForm.spec.ts" class. It would be best to create the SPEC classes like the example one.  
+3. Create a spec class in the "cypress/e2e/" folder. For more details, you can see comments inside the "cypress/e2e/0.0.Examples/3.RealExample/FillTheForm.spec.ts" class. It would be best to create the SPEC classes like the example one.  
   - You can see the class "cypress/e2e/0.0.Examples/4.MultiTenantSiteExample/MultiTenantSiteExample.spec.ts" too if you want to create multi clients (multi-tenants) spec, class.
 4. You can open Cypress Test Runner by typing the following command in the terminal:
 > npm run cypress:open
@@ -50,7 +50,7 @@ Official documentation: https://docs.cypress.io/api/cypress-api/custom-commands
 There are four folders inside the "cypress/support".  
 In "CustomFunctions" - are placed all custom TS functions.  
 In "DataDrivenTestingWithExcel" - are placed functions for Data-Driven Testing implementation.  
-In "DomainSpecificLanguage-LowLevel", - are placed all functions used for Dimain Specific Language (DSL). DSL functions from a low level are custom Cypress commands. For example, this can be:  
+In "DomainSpecificLanguage-LowLevel", - are placed all functions used for Domain Specific Language (DSL). DSL functions from a low level are custom Cypress commands. For example, this can be:  
 - Selecting an element and verifying that the element is visible and not disabled.  
 - Send some text string to input the text element and verify that the text is there (verify that the text was sent).  
 - Navigate to the URL and verify that the loaded URL is the same as used.  
@@ -92,10 +92,10 @@ The framework can run multiple tests grouped in different suites.
 ### Reports:
 There are two ways to generate a report.  
 1. Cloud Reporting: you can use CI to preview the results of the execution of the tests. Read the official documentation: https://docs.cypress.io/guides/dashboard/runs#Run-details
-2. Local Reporting: You can use the mochawsome reporting mechanism. To generate a report after running the tests, add "--reported mochawesome" to the terminal command that triggers the execution of the tests, for example:  
+2. Local Reporting: You can use the Mochawsome reporting mechanism. To generate a report after running the tests, add "--reported mochawesome" to the terminal command that triggers the execution of the tests, for example:  
 > npx cypress run --spec "cypress\e2e\0.0.Examples\3.RealExample\FillTheForm.spec.ts" --browser chrome --reporter mochawesome
 
-You can add multiple spec classes - separate them with a comma. Use the following example:  
+You can add multiple spec classes - and separate them with a comma. Use the following example:  
 > npx cypress run --spec "{path to first spec class}, {path to second spec class}..." --browser chrome --reporter mochawesome
 
 You can find the report in the "cypress/report" folder.
@@ -104,8 +104,8 @@ If some tests fail - you can find a video and screenshot inside the "cypress/vid
 
 ### Data-Driven Testing:
 A mechanism is integrated with the framework for reading data from Excel files.  
-1. Crete a new excel file and put it inside the "cypress/fixture/" folder. When you create the excel file, you should name each column that will be used. The mechanism reads the first values of the columns and locates them by their names. The name of the columns is the first-row value. Every value after the first row is a testing value. Make sure that you enter one word for each column name. If you use two words - the mechanism will not work.  
-2. Create a new JSON file with the same name as the excel file. The mechanism will get the data from the excel file and put them inside the JSON file.
+1. Crete a new Excel file and put it inside the "cypress/fixture/" folder. When you create the Excel file, you should name each column that will be used. The mechanism reads the first values of the columns and locates them by their names. The name of the columns is the first-row value. Every value after the first row is a testing value. Make sure that you enter one word for each column name. If you use two words - the mechanism will not work.  
+2. Create a new JSON file with the same name as the Excel file. The mechanism will get the data from the Excel file and put them inside the JSON file.
 3. Now, you can use the mechanism. You can see the example class located in "cypress/e2e/0.0.Examples/2.TSSamples/data-driven-testing.spec.ts".
 
 ### Terminal Commands:
@@ -115,7 +115,7 @@ Because working with Cypress is related to executing different commands inside t
 Because sometimes we will need to upload files, there is a folder where we can put those files. The folder is located in "cypress/uploads".   Of course, you can use any other folder inside your storage.  
 
 ### Colorize the log:
-Cypress doesn't have a mechanism for colourizing the cy.log text. By default, this text is coloured in black, like everything else. But for our frame, this colour needs to be changed. That's why we are using a cypress-dark theme. To colourize the cy.log, add the following CSS rule at the bottom of the file "node_modules/cypress-dark/src/dark.css":  
+Cypress doesn't have a mechanism for colorizing the cy.log text. By default, this text is colored in black, like everything else. But for our frame, this color needs to be changed. That's why we are using a cypress-dark theme. To colorize the cy.log, add the following CSS rule at the bottom of the file "node_modules/cypress-dark/src/dark.css":  
 ```
 li[class~="command-name-log"] div.command-wrapper-text > span > span > span {
   color: red!important;
@@ -123,8 +123,8 @@ li[class~="command-name-log"] div.command-wrapper-text > span > span > span {
 }
 ```
 You can apply any CSS rules.  
-The cypress-dark theme comes with an annoying sound executed every time an error occurs. When we are developing the tests, many mistakes happen—that's why we can replace the annoying sound with another one. You can find an example sound in the root folder with the name "Halloween-laugh.mp3" just put it inside the "node_modules/cypress-dark/src/" folder.  
-It would help replace the music whenever you updated the frame with the new version of Cypress or the latest version of the cypress-dark plugin. It is created as a patch for easy automatically applying the CSS rules. The patch can be found in the "patches/cypress-dark+1.8.3.patch".
+The cypress-dark theme comes with an annoying sound executed every time an error occurs. When we are developing the tests, many mistakes happen—that's why we can replace the annoying sound with another one. You can find an example sound in the root folder with the name "Halloween-laugh.mp3" Just put it inside the "node_modules/cypress-dark/src/" folder.  
+It would help replace the music whenever you updated the frame with the new version of Cypress or the latest version of the Cypress-dark plugin. It is created as a patch for easy automatically applying the CSS rules. The patch can be found in the "patches/cypress-dark+1.8.3.patch".
 
 ### To Do:
 The frame is not perfect. That's why there is a to-do list located in "cypress/toDo/toDo.txt".  
